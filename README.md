@@ -1,4 +1,4 @@
-# DotNetDemo
+# .Net Prom Demo
 This app implements the instrumentation examples from the [Prometheus SDK](https://github.com/prometheus-net/prometheus-net) using the ASP.NET Core Web API starting template app in Visual Studio.
 
 To use the same starting app:
