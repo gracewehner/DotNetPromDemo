@@ -1,0 +1,25 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-app
+  namespace: example-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-app
+  template:
+    metadata:
+      labels:
+        app: example-app
+    spec:
+      containers:
+      - name: example-app
+        image: gracepromacr.azurecr.io/webapplication3:20231004150949
+        ports:
+        - name: metrics
+          containerPort: 1234
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"

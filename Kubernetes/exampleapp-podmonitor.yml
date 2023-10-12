@@ -1,0 +1,15 @@
+﻿apiVersion: azmonitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: example-app
+  namespace: example-namespace
+  labels:
+    app: example-app
+spec:
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      app: example-app
+  podMetricsEndpoints:
+  - port: metrics
