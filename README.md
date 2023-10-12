@@ -10,9 +10,9 @@ To use the same starting app:
 
 To deploy the app on your cluster:
 1. Build the Docker container image and push to an Azure Container Registry.
-2. Replace the value of `image` field in `example-app.yaml` with your image.
-3. Make sure your cluster has access to the ACR, and use `kubectl apply -f example-app.yaml` to deploy onto the cluster.
+2. Replace the value of `image` field in the file `Kubernetes/example-app.yaml` with your image.
+3. Make sure your cluster has access to the ACR, and use `kubectl apply -f Kubernetes/example-app.yaml` to deploy onto the cluster.
 
 To scrape the metrics:
 1. Make sure the Managed Prometheus addon is enabled.
-2. Configure the scrape config either by applying `ama-metrics-prometheus-config.yaml`, or if using the operator private preview, apply the pod monitor with `example-podmonitor.yaml`.
+2. Configure the scrape config either by applying `Kubernetes/ama-metrics-prometheus-config.yaml`, or if using the operator private preview, apply the pod monitor with `Kubernetes/example-podmonitor.yaml`.
